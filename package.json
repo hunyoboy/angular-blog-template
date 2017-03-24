@@ -1,0 +1,8 @@
+{
+  "name": "blog_demo_app",
+  "version": "1.0.0",
+  "description": "These files are part of a Demo Blog App.",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

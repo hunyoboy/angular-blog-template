@@ -1,0 +1,65 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" ng-app="blogDemoApp">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <base href="/">
+  <title ng-bind="title">A Blog Demo SPA App</title>
+  <meta name="description" content="{{description}}">
+  <meta name="viewport" content="width=device-width">
+
+  <!-- vendor:css -->
+  <link href="//fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- vendorend -->
+
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+
+  <!--[if lt IE 7]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <div ui-view=""></div>
+
+  <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>    
+  <![endif]-->
+
+  <!-- bower:js -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>  
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>  
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+  <!-- endbower -->
+
+  <!-- app:js -->
+  <script src="app/app.js"></script>  
+  <script src="app/controller/main.controller.js"></script>
+  <script src="app/service/articles.service.js"></script>
+  <script src="config.js"></script>
+  <!-- endapp -->
+
+  <!-- components:js -->
+  <script src="components/navbar/navbar.directive.js"></script>
+  <script src="components/navbar/navbar.controller.js"></script>
+  <script src="components/navbar/slide-menu.directive.js"></script>
+  <script src="components/footer/footer.directive.js"></script>
+  <script src="components/footer/footer.controller.js"></script>  
+  <script src="components/utils/utils.service.js"></script>
+  <!-- endcomponents -->
+
+</body>
+
+</html>

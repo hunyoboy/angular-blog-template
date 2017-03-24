@@ -1,0 +1,55 @@
+<navbar></navbar>
+<br>
+<div class="jumbotron hidden-xs">
+  <div class="container text-center">
+    <h1>{{blogName}}</h1>
+  </div>
+</div>
+<br class="visible-xs">
+<br class="visible-xs">
+
+
+<div class="container spacedown" ng-init="loadData()">
+
+  <div class="row">
+    <br class="visible-xs">
+    <div class="col-xs-12">
+      <div class="btn-group" uib-dropdown is-open="status.isopen">
+        <button id="single-button" type="button" class="btn btn-danger sorter" uib-dropdown-toggle ng-disabled="disabled">
+          Sort by <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+          <li role="menuitem"><a href="#" ng-click="sortByDate('date', 0)">Date - Old to New</a></li>
+          <li role="menuitem"><a href="#" ng-click="sortByDate('date', 1)">Date - New to Old</a></li>          
+          <li class="divider"></li>
+          <li role="menuitem"><a href="#" ng-click="sortByTitle('date', 0)">Title  A-Z</a></li>
+          <li role="menuitem"><a href="#" ng-click="sortByTitle('date', 1)">Title  Z-A</a></li>
+        </ul>
+      </div>
+      &nbsp;
+      <span class="text-muted text-small">
+         {{sortDir}}
+      </span>
+    </div> 
+    <br class="visible-xs">   
+  </div>
+
+  <div class="row" ng-repeat="group in articles">
+    <hr ng-show="$index >= 1" class="visible-lg">
+    <div class="col-lg-4 article" ng-repeat="article in group">
+      <h2>{{article.title}}</h2>
+      <p class="text-muted">{{article.date | date : "M/d/yy h:mm a"}}</p>
+      <img ng-show="article.imageUrl && article.imageUrl.length > 0" ng-src="{{article.imageUrl}}" alt="{{article.title}}" class="img-responsive">
+      <br>
+      <p class="description">
+        {{article.description}}
+      </p>
+      <br class="visible-xs visible-sm visible-md">
+      <br class="visible-xs visible-sm visible-md">
+    </div>
+  </div>
+</div>
+
+<!-- /container -->
+
+<footer></footer>
