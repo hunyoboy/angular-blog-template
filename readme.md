@@ -1,4 +1,4 @@
-# A TMZ Javascript Test Demo
+# Angular Responsive Blog Template
 
 A template or starter kit to build your responsive blog in AngularJs/Bootstrap with slideout menu on mobile. See it in action here, http://joecaps.com/blog/demo/angular-blog-template/
 
