@@ -2,7 +2,7 @@
 
 A template or starter kit to build your responsive blog in AngularJs/Bootstrap with slideout menu on mobile. See it in action here, http://joecaps.com/blog/demo/angular-blog-template/
 
-##Requirement
+## Requirement
 
 Bower is used as the tool to manage dependencies and must be installed on your system. For download instructions for your 
 platform, see https://bower.io/.
